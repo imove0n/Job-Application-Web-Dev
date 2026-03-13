@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C5A458;
+  --color-gold-light: #D4B96A;
+  --color-gold-dark: #B08E3A;
+  --color-navy: #2C2851;
+  --color-navy-light: #4A4570;
+  --color-purple-text: #6B5B95;
+  --color-gray-bg: #F7F7F7;
+  --color-gray-border: #E0E0E0;
+  --color-gray-text: #999;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-navy);
+    background: var(--color-gray-bg);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Phone input overrides */
+.PhoneInputInput {
+  outline: none !important;
+  background: transparent !important;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.PhoneInputCountry {
+  margin-right: 0.5rem;
+}
+
+/* Date and time input styling */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 0.8;
+}
